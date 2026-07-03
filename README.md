@@ -1,4 +1,4 @@
-# chimera-dome-lna
+# chimera-ROBO43-dome
 
 Chimera dome plugin for the LNA 43 cm observatory. Controls a classic rotating dome via a custom serial controller and doubles as a calibration lamp controller.
 
