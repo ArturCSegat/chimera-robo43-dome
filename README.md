@@ -24,5 +24,6 @@ dome:
     az_resolution: 2
     slew_timeout: 120
     serial_timeout_s: 10
+    fake: true # mock serial controller
 ```
 
