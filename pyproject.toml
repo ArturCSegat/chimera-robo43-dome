@@ -1,0 +1,35 @@
+[project]
+name = "chimera-robo43-dome"
+version = "0.1"
+description = "Chimera dome plugin for LNA ROBO43"
+license = "GPL-2.0-or-later"
+authors = [
+    { name = "Artur Camera Segat", email = "artur.segat@ecomp.ufsm.br" },
+]
+
+requires-python = ">=3.13"
+dependencies = ["chimera", "pyserial>=3.5", "numpy"]
+
+[tool.uv.sources]
+chimera = { path = "../chimera" }
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.uv]
+dev-dependencies = [
+    "pytest>=8.3.3",
+    "ruff>=0.9.4",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "--import-mode=importlib"
+
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["N", "I", "UP", "F"]
